@@ -1,4 +1,4 @@
-package com.fastcampus.batchcampus;
+package com.fastcampus.batchcampus.example;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

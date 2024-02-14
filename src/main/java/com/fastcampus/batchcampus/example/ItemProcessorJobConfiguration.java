@@ -1,4 +1,4 @@
-package com.fastcampus.batchcampus;
+package com.fastcampus.batchcampus.example;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -12,9 +12,7 @@ import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;
 import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.support.CustomSQLErrorCodesTranslation;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import java.util.Arrays;

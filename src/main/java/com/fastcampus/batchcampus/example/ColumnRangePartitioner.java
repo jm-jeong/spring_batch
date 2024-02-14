@@ -1,4 +1,4 @@
-package com.fastcampus.batchcampus;
+package com.fastcampus.batchcampus.example;
 
 import org.springframework.batch.core.partition.support.Partitioner;
 import org.springframework.batch.item.ExecutionContext;
