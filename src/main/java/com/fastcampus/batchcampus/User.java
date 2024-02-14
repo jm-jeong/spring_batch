@@ -1,5 +1,6 @@
 package com.fastcampus.batchcampus;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +15,9 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+//    @JsonIgnore
+    private Long id;
+
     private String name;
 
     private String age;

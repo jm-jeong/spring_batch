@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.transaction.PlatformTransactionManager;
-@Configuration
+//@Configuration
 public class ItemReaderJobConfiguration {
 
     @Bean
@@ -37,11 +37,11 @@ public class ItemReaderJobConfiguration {
     public Step step(
             JobRepository jobRepository,
             PlatformTransactionManager platformTransactionManager,
-            ItemReader<User> fixedLengthFlatFileItemReader
+            ItemReader<User> jpaPagingItemReader
     ) {
         return new StepBuilder("step",jobRepository)
                 .<User, User>chunk(2, platformTransactionManager)
-                .reader(fixedLengthFlatFileItemReader)
+                .reader(jpaPagingItemReader)
                 .writer(System.out::println)
                 .build();
     }
